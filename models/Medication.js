@@ -30,11 +30,11 @@ Medication.init({
     }
     },
     {
-        sequelize
+        sequelize, tableName: "medication",freezeTableName: true
     }
 );
 
-
+module.exports = Medication;
 
 
 

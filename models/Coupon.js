@@ -10,11 +10,14 @@ Coupon.init(
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
-        autoIncrement: true,
     },
-        medication_id: {
-            type: DataTypes.STRING,
-            allowNull: false 
+    medication_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+            model: "medication",
+            key: "id",
+        },
         },
         coupon_description: {
             type: DataTypes.STRING,
@@ -27,6 +30,8 @@ Coupon.init(
         }
     },
     {
-        sequelize
+        sequelize, tableName: "coupon",freezeTableName: true
     }
 );
+
+module.exports = Coupon;
