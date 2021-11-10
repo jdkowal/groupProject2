@@ -1,10 +1,17 @@
-{{!-- {{#each users as |user| }}
-<div class="row align-center mb-5">
-  <div class="col-md-6">
-    <h2>{{{get_emoji}}} {{user.first_name}}</h2>
+<form id="search-medication">
+  <div class="row">
+    <h4>Please enter a medication:</h4>
   </div>
-  <div class="col-md-6">
-    <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
+<div class="row">
+  <div class="col s12">
+<div class="row">
+  <div class="col s9">
+          <input placeholder="Tylenol" id="search_field" type="text" class="validate">
+  </div>
+  <div class="col s3">
+  <button style="width: 100%;" class="btn btn-block waves-effect waves-light" type="submit" name="action">Search</button>
   </div>
 </div>
-{{/each}} --}}
+  </div>
+</div>
+</form>
