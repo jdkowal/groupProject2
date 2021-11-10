@@ -48,6 +48,7 @@ router.post('/logout', (req, res) => {
 });
 
 router.post('/register', async (req, res) => {
+
   try {
     const newUser = await User.create({
       first_name: req.body.first_name,
@@ -59,12 +60,13 @@ router.post('/register', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = newUser.id;
       req.session.email = newUser.email;
-      req.session.loggedIn = true;
+      req.session.logged_in = true;
 
       res.json(newUser);
+      
     });
   } catch (err) {
-    console.log(err);
+
     res.status(500).json(err);
   }
 });
