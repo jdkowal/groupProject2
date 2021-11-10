@@ -17,7 +17,7 @@ const registerFormHandler = async (event) => {
             // Send the e-mail and password to the server
             const response = await fetch('/api/users/register', {
                 method: 'POST',
-                body: JSON.stringify({ firstName, lastName, email, password }),
+                body: JSON.stringify({ first_name:firstName, last_name:lastName, email, password }),
                 headers: { 'Content-Type': 'application/json' },
             });
 
