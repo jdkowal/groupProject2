@@ -10,8 +10,9 @@ Coupon.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
+            autoIncrement: true
         },
-        coupon_id: {
+        user_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: "user",
