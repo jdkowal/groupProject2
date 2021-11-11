@@ -32,6 +32,10 @@ You’ll need to use the following dependencies and packages:
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"
 
+## OT¢ slideshow
+
+https://docs.google.com/presentation/d/1ZOrwO3LHIRJTBaZ3LKWtg7__INlmhp7Gerbq8SiAWFU/edit?usp=sharing
+
 
 ## Liscense
 
