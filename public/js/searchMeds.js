@@ -1,5 +1,7 @@
+
+
 let searchField = document.querySelector('.search_req');
-let searchButton = document.querySelector('#search-medication');
+let searchButton = document.querySelector('#search-button');
 
 function getDrugInfoBySearch(searchValue) {
     fetch(`https://api.fda.gov/drug/label.json?search=${searchValue}&limit=10`,{
@@ -10,16 +12,19 @@ function getDrugInfoBySearch(searchValue) {
     }).then(res => {
     return res.json()
     })
-    .then(data =>console.log(data))
+    .then(function (data){
+        console.log(data)
+
+    })
+
     .catch(error =>console.log('ERROR'))
 
 }
 
 
-searchButton.addEventListener('submit', function (event){
+searchButton.addEventListener('click', function (event){
     event.preventDefault();
     let searchValue = searchField.value.trim(); 
 
     getDrugInfoBySearch(searchValue);
-    console.log(searchValue);
 })
