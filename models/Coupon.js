@@ -5,32 +5,34 @@ const sequelize = require('../config/connection');
 class Coupon extends Model { }
 
 Coupon.init(
-    {    
+    {
         id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-    },
-    medication_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-            model: "medication",
-            key: "id",
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
         },
+        coupon_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: "user",
+                key: "id",
+            },
+        },
+        medication_name: {
+            type: DataTypes.STRING,
+            allowNull: false
         },
         coupon_description: {
             type: DataTypes.STRING,
             allowNull: false
         },
         coupon_url: {
-
-        type: DataTypes.STRING,
-        allowNull: false
+            type: DataTypes.STRING,
+            allowNull: false
         }
     },
     {
-        sequelize, tableName: "coupon",freezeTableName: true
+        sequelize, tableName: "coupon", freezeTableName: true
     }
 );
 
