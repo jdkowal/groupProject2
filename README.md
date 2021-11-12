@@ -14,8 +14,9 @@ coupon to the cashier at the register.
 
 ## Mock-up
 
-The following // shows an example of the application being used 
-from the command line:
+The following image shows the web application's appearance and functionality: 
+
+![The OT¢ app includes a search option, a drop down menu with quick links and a coupon qr-code generator.](./Assets/otc-homepage.png)
 
 ## Getting Started
 
