@@ -2,37 +2,39 @@
   <div class="row">
     <h4>Please enter a medication:</h4>
   </div>
-<div class="row">
-  <div class="col s12">
-<div class="row">
-  <div class="col s9">
+  <div class="row">
+    <div class="col s12">
+      <div class="row">
+        <div class="col s9">
           <input placeholder="Tylenol" id="search_field" type="text" class="validate search_req">
-  </div>
-  <div class="col s3">
-  <button style="width: 100%;" id="search-button" class="btn btn-block waves-effect waves-light" type="submit" name="action">Search</button>
-  </div>
-</div>
-  </div>
-</div>
-</form>
-
-<div class="collection">
-{{#each conceptData as |medication| }}
-  <a href="#!" class="collection-item">{{medication.synonym}}</a>
-{{/each}}
-</div>
-
-{{!-- <div class="row">
-    <div class="col s12 m6">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title med-name">Medication Name</span>
-          <p class="med-description">The description of the mdeication would go here.</p>
         </div>
-                <div class="card-action">
-          <a href="#">Get Coupon</a>
+        <div class="col s3">
+          <button style="width: 100%;" id="search-button" class="btn btn-block waves-effect waves-light" type="submit"
+            name="action">Search</button>
         </div>
       </div>
     </div>
-  </div> --}}
+  </div>
+</form>
+
+<div class="collection">
+  {{#each conceptData as |medication| }}
+  {{!-- <a href="#!" class="collection-item">{{medication.synonym}}</a> --}}
+  <li class="collection-item"><div>{{medication.synonym}}<a href="#!" class="secondary-content"><span class="badge green">Add Coupon</span></a></div></li>
+  {{/each}}
+</div>
+
+{{!-- <div class="row">
+  <div class="col s12 m6">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title med-name">Medication Name</span>
+        <p class="med-description">The description of the mdeication would go here.</p>
+      </div>
+      <div class="card-action">
+        <a href="#">Get Coupon</a>
+      </div>
+    </div>
+  </div>
+</div> --}}
 <script src="js/searchMeds.js"></script>
