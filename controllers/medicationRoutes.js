@@ -9,7 +9,7 @@ router.get('/:name', withAuth, async (req, res)=> {
     let conceptData = medDataFilter.map((concept)=> concept.conceptProperties).flat();
     console.log(conceptData);
     
-res.render('homepage', {conceptData, logged_in: req.session.logged_in})
+res.render('homepage', {conceptData, user_id: req.session.user_id, logged_in: req.session.logged_in})
 
 });
 
